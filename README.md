@@ -14,13 +14,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-$ composer require creocoder/yii2-flysystem
+$ composer require goranmitev/yii2-flysystem
 ```
 
 or add
 
 ```
-"creocoder/yii2-flysystem": "0.8.*"
+"goranmitev/yii2-flysystem": "0.8.*"
 ```
 
 to the `require` section of your `composer.json` file.
@@ -37,7 +37,7 @@ return [
     'components' => [
         //...
         'fs' => [
-            'class' => 'creocoder\flysystem\LocalFilesystem',
+            'class' => 'goranmitev\flysystem\LocalFilesystem',
             'path' => '@webroot/files',
         ],
     ],
@@ -92,13 +92,13 @@ return [
 Either run
 
 ```bash
-$ composer require league/flysystem-aws-s3-v2
+$ composer require league/flysystem-aws-s3-v3
 ```
 
 or add
 
 ```
-"league/flysystem-aws-s3-v2": "~1.0"
+"league/flysystem-aws-s3-v3": "~1.0"
 ```
 
 to the `require` section of your `composer.json` file and configure application `components` as follows
@@ -113,7 +113,8 @@ return [
             'key' => 'your-key',
             'secret' => 'your-secret',
             'bucket' => 'your-bucket',
-            // 'region' => 'your-region',
+            'region' => 'your-region',
+            'version' => 'latest',
             // 'baseUrl' => 'your-base-url',
             // 'prefix' => 'your-prefix',
             // 'options' => [],
